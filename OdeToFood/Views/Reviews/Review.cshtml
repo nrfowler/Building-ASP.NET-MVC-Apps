@@ -1,0 +1,23 @@
+﻿@model OdeToFood.Models.RestaurantReview
+
+
+<div class="review">
+    <h4>
+        @Html.DisplayFor(modelItem => Model.Name)
+    </h4>
+    <p>
+        @Html.DisplayFor(modelItem => Model.City)
+
+        @*@Html.DisplayFor(modelItem => Model.Country)*@
+        @Html.Raw(Model.Country)
+    </p>
+    <span>
+        @*@Html.DisplayFor(modelItem => Model.Rating)*@
+        @(Model.Rating + 1)
+    </span>
+    <span class="right">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+    </span>
+</div>
