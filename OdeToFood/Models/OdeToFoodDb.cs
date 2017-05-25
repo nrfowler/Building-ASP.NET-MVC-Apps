@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
+
 
 namespace OdeToFood.Models
 {
@@ -15,5 +13,6 @@ namespace OdeToFood.Models
 
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantReview> Reviews { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
     }
 }
