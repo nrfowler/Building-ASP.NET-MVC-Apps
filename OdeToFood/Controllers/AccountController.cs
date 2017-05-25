@@ -31,7 +31,6 @@ namespace OdeToFood.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [RequireHttps]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model, string returnUrl)
         {
