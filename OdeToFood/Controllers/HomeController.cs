@@ -8,6 +8,7 @@ using PagedList;
 
 namespace OdeToFood.Controllers
 {
+    
     public class HomeController : Controller
     {
         OdeToFoodDb _db = new OdeToFoodDb();
@@ -48,7 +49,7 @@ namespace OdeToFood.Controllers
             }
             return View(model);
         }
-        [Authorize]
+        
         public ActionResult About()
         {
             var model = new AboutModel();
