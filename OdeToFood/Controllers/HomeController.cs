@@ -26,7 +26,7 @@ namespace OdeToFood.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
 
         }
-        [OutputCache(CacheProfile ="Long")]
+        [OutputCache(CacheProfile ="Long", VaryByHeader ="Accept-Language")]
         public ActionResult Index(string searchTerm = null, int page = 1)
         {
             var model =
